@@ -1,0 +1,96 @@
+#clock{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    height: 50px;
+    position: relative;
+  }
+
+  .tBox {
+    height: 50px;
+    position: relative;
+    
+  }
+  .t{
+    height: auto;
+    width: 50px;
+    transform: translateY(var(--offset));
+    will-change: transform;
+    transition: transform 800ms;
+  }
+  .number {
+    border-radius: 7px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transition: color 400ms;
+  }
+  body {
+    background: #010b38;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+  }
+
+
+
+
+
+  .tBox::before, .tBox::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    border-radius: 4px;
+    transition: opacity 400ms;
+    z-index: 1;
+    background-color: rgba(200, 206, 239, 0.1);
+    box-shadow: 0 0 10px rgba(200, 206, 239, 0.05);
+  }
+  
+
+
+  .t {
+    height: auto;
+    width: 50px;
+    transform: translateY(var(--offset));
+    will-change: transform;
+    transition: transform 800ms;
+
+  }
+  .t::before {
+    content: "";
+    display: block;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 400ms;
+    background: linear-gradient(145deg, #132374, #1d6e94);
+    box-shadow: 5px 5px 10px #0d0d0e, -5px -5px 10px #8695ec;
+  }
+  
+  .number {
+    border-radius: 7px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transition: color 400ms;
+    color: #e0e0e0;
+  }
